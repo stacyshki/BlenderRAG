@@ -2,3 +2,4 @@
 .gradio
 .env
 src/__pycache__
+tester.ipynb
