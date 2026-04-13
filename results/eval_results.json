@@ -1,0 +1,173 @@
+[
+  {
+    "name": "e5-base-v2 + gpt-oss-120b | cs=1000 ov=100 n=3 th=0.8",
+    "avg_distance": 0.2752083218097687,
+    "avg_retrieval_time": 0.035,
+    "avg_generation_time": 4.779,
+    "faithfulness": 0.854,
+    "answer_relevancy": 0.86,
+    "context_precision": 0.71
+  },
+  {
+    "name": "all-MiniLM-L6-v2 + gpt-oss-120b | cs=500 ov=200 n=10 th=1",
+    "avg_distance": 0.684608381986618,
+    "avg_retrieval_time": 0.011,
+    "avg_generation_time": 7.368,
+    "faithfulness": 0.734,
+    "answer_relevancy": 0.718,
+    "context_precision": 0.3
+  },
+  {
+    "name": "all-MiniLM-L6-v2 + flan-t5-base | cs=2000 ov=200 n=5 th=1.1",
+    "avg_distance": 0.684608381986618,
+    "avg_retrieval_time": 0.008,
+    "avg_generation_time": 0.887,
+    "faithfulness": 0.493,
+    "answer_relevancy": 0.346,
+    "context_precision": 0.366
+  },
+  {
+    "name": "bge-small-en-v1.5 + flan-t5-base | cs=1000 ov=200 n=5 th=1",
+    "avg_distance": 0.41529214262962344,
+    "avg_retrieval_time": 0.019,
+    "avg_generation_time": 2.254,
+    "faithfulness": 0.739,
+    "answer_relevancy": 0.704,
+    "context_precision": 0.702
+  },
+  {
+    "name": "all-mpnet-base-v2 + gpt-oss-120b | cs=1000 ov=100 n=3 th=1.1",
+    "avg_distance": 0.7938631772994995,
+    "avg_retrieval_time": 0.032,
+    "avg_generation_time": 3.604,
+    "faithfulness": 0.616,
+    "answer_relevancy": 0.645,
+    "context_precision": 0.291
+  },
+  {
+    "name": "all-mpnet-base-v2 + flan-t5-base | cs=1000 ov=100 n=5 th=0.8",
+    "avg_distance": 0.7938631772994995,
+    "avg_retrieval_time": 0.032,
+    "avg_generation_time": 2.372,
+    "faithfulness": 0.523,
+    "answer_relevancy": 0.381,
+    "context_precision": 0.26
+  },
+  {
+    "name": "e5-base-v2 + flan-t5-base | cs=1500 ov=200 n=5 th=1",
+    "avg_distance": 0.2752083218097687,
+    "avg_retrieval_time": 0.032,
+    "avg_generation_time": 2.912,
+    "faithfulness": 0.843,
+    "answer_relevancy": 0.804,
+    "context_precision": 0.708
+  },
+  {
+    "name": "e5-base-v2 + llama-3.1-8b-instant | cs=1000 ov=200 n=3 th=1",
+    "avg_distance": 0.2752083218097687,
+    "avg_retrieval_time": 0.032,
+    "avg_generation_time": 5.214,
+    "faithfulness": 0.844,
+    "answer_relevancy": 0.852,
+    "context_precision": 0.71
+  },
+  {
+    "name": "bge-base-en-v1.5 + flan-t5-large | cs=500 ov=100 n=3 th=0.8",
+    "avg_distance": 0.4203290832042694,
+    "avg_retrieval_time": 0.047,
+    "avg_generation_time": 1.715,
+    "faithfulness": 0.673,
+    "answer_relevancy": 0.618,
+    "context_precision": 0.671
+  },
+  {
+    "name": "all-MiniLM-L6-v2 + flan-t5-large | cs=500 ov=200 n=5 th=1.1",
+    "avg_distance": 0.684608381986618,
+    "avg_retrieval_time": 0.013,
+    "avg_generation_time": 2.404,
+    "faithfulness": 0.393,
+    "answer_relevancy": 0.28,
+    "context_precision": 0.366
+  },
+  {
+    "name": "all-MiniLM-L6-v2 + flan-t5-large | cs=500 ov=200 n=3 th=0.8",
+    "avg_distance": 0.684608381986618,
+    "avg_retrieval_time": 0.008,
+    "avg_generation_time": 1.525,
+    "faithfulness": 0.388,
+    "answer_relevancy": 0.279,
+    "context_precision": 0.428
+  },
+  {
+    "name": "bge-base-en-v1.5 + gpt-oss-120b | cs=500 ov=200 n=3 th=1.1",
+    "avg_distance": 0.4203290832042694,
+    "avg_retrieval_time": 0.031,
+    "avg_generation_time": 2.488,
+    "faithfulness": 0.733,
+    "answer_relevancy": 0.721,
+    "context_precision": 0.671
+  },
+  {
+    "name": "e5-base-v2 + llama-3.1-8b-instant | cs=2000 ov=100 n=5 th=1.1",
+    "avg_distance": 0.2752083218097687,
+    "avg_retrieval_time": 0.033,
+    "avg_generation_time": 8.556,
+    "faithfulness": 0.858,
+    "answer_relevancy": 0.856,
+    "context_precision": 0.708
+  },
+  {
+    "name": "all-MiniLM-L6-v2 + flan-t5-large | cs=500 ov=100 n=3 th=0.8",
+    "avg_distance": 0.684608381986618,
+    "avg_retrieval_time": 0.008,
+    "avg_generation_time": 1.522,
+    "faithfulness": 0.388,
+    "answer_relevancy": 0.279,
+    "context_precision": 0.428
+  },
+  {
+    "name": "e5-base-v2 + flan-t5-large | cs=1000 ov=100 n=3 th=1.1",
+    "avg_distance": 0.2752083218097687,
+    "avg_retrieval_time": 0.031,
+    "avg_generation_time": 2.861,
+    "faithfulness": 0.801,
+    "answer_relevancy": 0.776,
+    "context_precision": 0.71
+  },
+  {
+    "name": "all-mpnet-base-v2 + llama-3.1-8b-instant | cs=1500 ov=100 n=3 th=1.1",
+    "avg_distance": 0.7938631772994995,
+    "avg_retrieval_time": 0.03,
+    "avg_generation_time": 4.509,
+    "faithfulness": 0.554,
+    "answer_relevancy": 0.585,
+    "context_precision": 0.291
+  },
+  {
+    "name": "e5-base-v2 + gpt-oss-120b | cs=1500 ov=200 n=3 th=1",
+    "avg_distance": 0.2752083218097687,
+    "avg_retrieval_time": 0.031,
+    "avg_generation_time": 4.663,
+    "faithfulness": 0.853,
+    "answer_relevancy": 0.846,
+    "context_precision": 0.71
+  },
+  {
+    "name": "e5-base-v2 + flan-t5-base | cs=1500 ov=200 n=5 th=0.8",
+    "avg_distance": 0.2752083218097687,
+    "avg_retrieval_time": 0.031,
+    "avg_generation_time": 2.917,
+    "faithfulness": 0.843,
+    "answer_relevancy": 0.804,
+    "context_precision": 0.708
+  },
+  {
+    "name": "bge-base-en-v1.5 + flan-t5-base | cs=2000 ov=200 n=3 th=1.1",
+    "avg_distance": 0.4203290832042694,
+    "avg_retrieval_time": 0.032,
+    "avg_generation_time": 0.691,
+    "faithfulness": 0.718,
+    "answer_relevancy": 0.661,
+    "context_precision": 0.671
+  }
+]
