@@ -196,5 +196,32 @@
     "faithfulness": 0.699,
     "answer_relevancy": 0.741,
     "context_precision": 0.366
+  },
+  {
+    "name": "all-MiniLM-L6-v2 + llama-3.3-70b-versatile | cs=1500 ov=100 n=5 th=0.8",
+    "avg_distance": 0.684608381986618,
+    "avg_retrieval_time": 0.021,
+    "avg_generation_time": 1.002,
+    "faithfulness": 0.708,
+    "answer_relevancy": 0.769,
+    "context_precision": 0.366
+  },
+  {
+    "name": "all-mpnet-base-v2 + llama-3.3-70b-versatile | cs=1000 ov=100 n=5 th=0.8",
+    "avg_distance": 0.7938631772994995,
+    "avg_retrieval_time": 0.047,
+    "avg_generation_time": 5.18,
+    "faithfulness": 0.602,
+    "answer_relevancy": 0.657,
+    "context_precision": 0.26
+  },
+  {
+    "name": "all-mpnet-base-v2 + llama-3.3-70b-versatile | cs=2000 ov=100 n=5 th=1.1",
+    "avg_distance": 0.7938631772994995,
+    "avg_retrieval_time": 0.03,
+    "avg_generation_time": 4.392,
+    "faithfulness": 0.603,
+    "answer_relevancy": 0.674,
+    "context_precision": 0.26
   }
 ]
