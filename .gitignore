@@ -3,5 +3,5 @@
 .env
 src/__pycache__
 tester.ipynb
-eval_db/chroma.sqlite3
-prod_db.db/chroma.sqlite3
+eval_db/
+prod_db.db/
