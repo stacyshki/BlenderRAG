@@ -95,11 +95,12 @@ class RAGPipeline:
 # GRADIO
 
 
-def launch_interface(pipeline: RAGPipeline, share: bool = False):
+def launch_interface(pipeline: RAGPipeline, share: bool = False,
+                    server_name: str = "127.0.0.1", port: int = 7860):
     gr.Interface(
         fn=pipeline.ask,
         inputs=gr.Textbox(label="Your question"),
         outputs=gr.Textbox(label="Answer"),
         title="Blender Documentation Assistant",
         flagging_mode="manual"
-    ).launch(share=share)
+    ).launch(share=share, server_name=server_name, server_port=port)

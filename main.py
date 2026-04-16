@@ -43,4 +43,5 @@ pipeline = RAGPipeline(
     distance_threshold=DIST_THRESHOLD
 )
 
-launch_interface(pipeline, share=True)
+launch_interface(pipeline, share=False,
+                server_name="0.0.0.0", port=int(os.environ.get("PORT", 7860)))
