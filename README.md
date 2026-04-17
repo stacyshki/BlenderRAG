@@ -131,7 +131,7 @@ While this approach is efficient and fully local, it is less accurate than LLM-b
 
 ### Designed approaches
 
-Evaluation pipeline tested 25 different sampled configs with the following parametes:
+Evaluation pipeline tested 25 different sampled configs with the following parameters:
 
 ```python
 EMBEDDING_MODELS = [
@@ -364,7 +364,7 @@ python main.py
 
 ## Important notes
 
-- Database can be commited only with git lfs
+- Database can be committed only with git lfs
 - Hugging Face token is not set up here. Nevertheless, it can be implemented to make embedding model/T5 model load faster (it is still instant without the token for me)
 - Not [all possible configurations](#designed-approaches) are tested, they are sampled with `seed=42`
 
