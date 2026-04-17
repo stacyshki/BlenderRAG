@@ -13,8 +13,6 @@ The manual in use can be found [here](https://docs.blender.org/manual/en/latest/
 - [Main configuration](#main-configuration)
   - [Comments on the configuration](#comments-on-the-configuration)
 - [Repository structure](#repository-structure)
-  - [Schema](#schema)
-  - [Comments](#comments)
 - [Cloning/Forking setup](#cloningforking-setup)
 - [Important notes](#important-notes)
 
@@ -256,7 +254,7 @@ def launch_interface(pipeline: RAGPipeline, share: bool = False,
 | BATCH_SIZE            | 5000                | Batching for DB upload                                            |
 | N_RESULTS             | 3                   | Setting from best cfg _(2)_                                       |
 | DIST_THRESHOLD        | 0.8                 | Threshold used to limit text generation model functionality _(4)_ |
-| LLM_MODEL             | openai/gpt-oss-120b | Text generation model _(6)_                                       |
+| LLM_MODEL             | openai/gpt-oss-120b | Text generation model _(5)_                                       |
 
 ### _Comments on the configuration_
 
@@ -268,24 +266,106 @@ _(3)_ Parameter addressing issue described [here](#chunking-problem)
 
 _(4)_ Parameter addressing issue described [here](#prompt-problems)
 
+_(5)_ Model using Groq API interface
+
 [Back to contents](#contents)
 
 ## Repository structure
 
-[Back to contents](#contents)
-
-### Schema
-
-[Back to contents](#contents)
-
-### Comments
-
-[Back to contents](#contents)
+```text
+BlenderRAG/
+├── results/                         # Evaluation pipeline outcomes
+│   └── eval_results.json
+├── src/                             # Main source code
+│   ├── custom_embedding_ragas.py    # Embedding creation for local evaluation
+│   ├── evaluate_results.py          # Logic for evaluation
+│   ├── load_DB.py                   # Database initialization
+│   ├── load_embed_txt.py            # Loading and embedding for BlenderManual.txt
+│   └── prompt_engine.py             # Main answer generation logic
+├── .env.example                     # Example how the .env file should look like
+├── .gitignore
+├── BlenderManual.txt                # Source text for database
+├── README.md
+├── evaluation.py                    # Evaluation pipeline writing to results/eval_results.json
+├── evaluation_analysis.ipynb        # Analysis of results/eval_results.json
+├── main.py                          # Production pipeline using Gradio
+└── requirements.txt                 # Python dependencies
+```
 
 ## Cloning/Forking setup
 
-[Back to contents](#contents)
+### Step 1
+
+#### Option 1: Clone the repository
+
+```bash
+git clone https://github.com/stacyshki/BlenderRAG.git
+cd BlenderRAG
+```
+
+#### Option 2: Fork the repository
+
+1. Open the repository on GitHub and click Fork.
+2. Clone your fork:
+   ```bash
+   git clone https://github.com/<your-username>/BlenderRAG.git
+   cd BlenderRAG
+   ```
+
+### Step 2: Install dependencies
+
+```bash
+python -m venv .venv
+source .venv/bin/activate   # Linux/macOS
+# .venv\Scripts\activate    # Windows
+
+pip install -r requirements.txt
+```
+
+### Step 3: Configure environment
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env`:
+
+```text
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+### Step 4: Run
+
+```bash
+python main.py
+```
+
+### Notes
+
+- The app uses BlenderManual.txt as the source document
+- The local database is stored in prod_db.db
+- By default, the interface starts on port 7860
+- If you do not want to use Groq API, you can use T5 Hugging Face model:
+
+  ```python
+  # in main.py:
+  from src.prompt_engine import T5LLM
+  ...
+  llm =T5LLM()
+
+  pipeline = RAGPipeline(
+      collection=collection,
+      embedding_func=emb_func,
+      llm=llm,
+      n_results=N_RESULTS,
+      distance_threshold=DIST_THRESHOLD
+  )
+  ```
 
 ## Important notes
+
+- Database can be commited only with git lfs
+- Hugging Face token is not set up here. Nevertheless, it can be implemented to make embedding model/T5 model load faster (it is still instant without the token for me)
+- Not [all possible configurations](#designed-approaches) are tested, they are sampled with `seed=42`
 
 [Back to contents](#contents)
