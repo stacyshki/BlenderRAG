@@ -1,5 +1,7 @@
 # Blender RAG project
 
+**Link to demo:** [link](https://huggingface.co/spaces/stacyshki/Blender-RAG)
+
 The project is designed to use retrieval-augmented generation for the purpose of extracting information from Blender. Blender is a free and open-source 3D computer graphics software suite. It runs on Windows, macOS, Linux, BSD, Haiku, and IRIX and is used for general 3D modeling, animation, digital sculpting, visual effects, rendering, compositing, motion tracking, drawing, 2D animation and video editing. It is widely used to create animated films, visual effects, art, 3D-printed models, motion graphics, interactive 3D applications, virtual reality, and 3D models for video games.
 
 The manual in use can be found [here](https://docs.blender.org/manual/en/latest/index.html), and it mostly navigates users on how to use the application and what functionality is available there.
